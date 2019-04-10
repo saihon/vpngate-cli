@@ -1,4 +1,6 @@
 builds:
+  - env:
+    - GO111MODULE=on
   - binary: vpngate-cli
     main: ./cmd/vpngate-cli
     goos:

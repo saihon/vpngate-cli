@@ -1,7 +1,10 @@
 language: go
 go:
-  - 1.12
+  - "1.12.x"
   - tip
+env:
+  global:
+    - GO111MODULE=on
 sudo: false
 branches:
   only: master
