@@ -1,6 +1,6 @@
 language: go
 go:
-  - 1.12.x
+  - 1.12
   - tip
 sudo: false
 branches:
