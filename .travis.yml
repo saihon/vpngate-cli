@@ -11,7 +11,4 @@ branches:
 script:
   - make test
 after_success:
-  - GO111MODULE=off go get github.com/goreleaser/goreleaser && goreleaser --snapshot
-  # - test -n "$TRAVIS_TAG" && GO111MODULE=off go get github.com/goreleaser/goreleaser && goreleaser release
-  # - test "$TRAVIS_OS_NAME" = "linux" -a -n "$TRAVIS_TAG" && GO111MODULE=off go get github.com/goreleaser/goreleaser && goreleaser
-  # - test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash
+  - test -n "$TRAVIS_TAG" && GO111MODULE=off go get github.com/goreleaser/goreleaser && goreleaser release --rm-dist
