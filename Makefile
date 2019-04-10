@@ -4,7 +4,7 @@ LDFLAGS="-w -s -X 'main.version=$(VERSION)'"
 PREFIX=/usr/local/bin/
 BIN_DIR=bin
 
-.PHONY: build $(BIN_DIR) clean install uninstall deps test release
+.PHONY: build $(BIN_DIR) clean install uninstall deps test
 
 build:$(BIN_DIR)
 	@GO111MODULE=on go build -ldflags=$(LDFLAGS) -o $(BIN_DIR)/$(NAME) ./cmd/$(NAME)/main.go
@@ -27,6 +27,3 @@ deps:
 test: deps
 	@go test ./...
 
-release:
-	@GO111MODULE=off go get github.com/goreleaser/goreleaser
-	goreleaser --rm-dist

@@ -23,7 +23,7 @@ vpngate client for command line
 ```
 <br/>
 
-2. Downloading from [releases page](https://github.com/saihon/vpngate-cli/releases) and then expand and Copy to the appropriate directory such as /usr/local/bin
+2. Downloading from [releases page](https://github.com/saihon/vpngate-cli/releases) and then expand and copy to the appropriate directory such as /usr/local/bin
 ```
     $ vpngate-cli
 ```
