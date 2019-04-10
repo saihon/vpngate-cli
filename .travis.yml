@@ -1,6 +1,6 @@
 language: go
 go:
-  - "1.12.x"
+  - '1.12.x'
   # - tip
 env:
   global:
@@ -11,4 +11,5 @@ branches:
 script:
   - make test
 after_success:
-  - test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash
+  - test "$TRAVIS_OS_NAME" = "linux" -a -n "$TRAVIS_TAG" && GO222MODULE=off go get github.com/goreleaser/goreleaser && goreleaser
+  # - test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash

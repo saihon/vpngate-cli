@@ -9,7 +9,9 @@ vpngate client for command line
 3. Connect use the OpenVPN command
 
 <br/>
+
 [![Build Status](https://travis-ci.org/saihon/vpngate-cli.svg?branch=master)](https://travis-ci.org/saihon/vpngate-cli)
+
 <br/>
 <br/>
 
