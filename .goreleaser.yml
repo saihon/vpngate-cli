@@ -2,7 +2,7 @@ builds:
   - env:
     - GO111MODULE=on
   - binary: vpngate-cli
-    main: ./cmd/vpngate-cli/main.go
+    main: ./cmd/vpngate-cli
     goos:
       - linux
     goarch:
@@ -17,3 +17,4 @@ release:
   github:
     owner: saihon
     name: vpngate-cli
+  draft: true
