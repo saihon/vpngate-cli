@@ -8,11 +8,13 @@ env:
 sudo: false
 branches:
   # only: master
+  # Deployment failed because this is not a tagged commit. https://github.com/travis-ci/travis-ci/issues/2495
   all_branches: true
 script:
   - make test
 # after_success:
   # - GO111MODULE=off go get github.com/goreleaser/goreleaser && goreleaser --rm-dist
+  # - test -n "$TRAVIS_TAG" && GO111MODULE=off go get github.com/goreleaser/goreleaser && goreleaser --rm-dist
 deploy:
 - provider: script
   skip_cleanup: true
