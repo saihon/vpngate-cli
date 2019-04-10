@@ -1,0 +1,11 @@
+language: go
+go:
+  - 1.12.x
+  - tip
+sudo: false
+branches:
+  only: master
+script:
+  - make test
+after_success:
+  - make release
