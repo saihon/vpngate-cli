@@ -1,6 +1,5 @@
-<br/>
 
-### vpngate-cli
+## vpngate-cli
 <br/>
 
 vpngate client for command line  
@@ -10,8 +9,12 @@ vpngate client for command line
 3. Connect use the OpenVPN command
 
 <br/>
+[![Build Status](https://travis-ci.org/saihon/vpngate-cli.svg?branch=master)](https://travis-ci.org/saihon/vpngate-cli)
+<br/>
+<br/>
 
-### Installation
+
+## Installation
 <br/>
 
 1. Install OpenVPN
