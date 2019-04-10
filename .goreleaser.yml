@@ -2,7 +2,7 @@ builds:
   - env:
     - GO111MODULE=on
   - binary: vpngate-cli
-    main: ./cmd/vpngate-cli
+    main: ./cmd/vpngate-cli/main.go
     goos:
       - linux
     goarch:
