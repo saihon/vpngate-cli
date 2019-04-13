@@ -24,5 +24,9 @@ func (v *VPNGate) edit(rec *record.Record) error {
 		return err
 	}
 
-	return exec.Command("/bin/sh", "-c", fmt.Sprintf("%s %s", editor, file)).Run()
+	cmd := exec.Command("/bin/sh", "-c", fmt.Sprintf("%s %s", editor, file))
+	cmd.Stderr = os.Stderr
+	cmd.Stdout = os.Stdout
+	cmd.Stdin = os.Stdin
+	return cmd.Run()
 }
