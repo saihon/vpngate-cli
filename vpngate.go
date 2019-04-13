@@ -47,10 +47,6 @@ func New(rawurl, directory string) (*VPNGate, error) {
 		flags:     flags,
 	}
 
-	if v.flags.clean {
-		return nil, Clean(v.pathmap)
-	}
-
 	v.fetch, err = fetch.New(v.pathmap.Get(`F@CACHE`).String(), false)
 	if err != nil {
 		return nil, err
@@ -60,6 +56,10 @@ func New(rawurl, directory string) (*VPNGate, error) {
 }
 
 func (v *VPNGate) Run() error {
+	if v.flags.clean {
+		return Clean(v.pathmap)
+	}
+
 	body, err := v.fetch.Do(v.rawurl, v.flags.request)
 	if err != nil {
 		return err
