@@ -3,7 +3,6 @@ package vpngate
 import (
 	"errors"
 	"fmt"
-	"os"
 	"os/user"
 	"strings"
 
@@ -38,15 +37,10 @@ type VPNGate struct {
 
 // New
 func New(rawurl, directory string) (*VPNGate, error) {
+	flag.Parse()
+
 	usr, err := user.Current()
 	if err != nil {
-		return nil, err
-	}
-
-	if err := flag.CommandLine.Parse(os.Args[1:]); err != nil {
-		if err == flag.ErrHelp {
-			return nil, ErrIgnorable
-		}
 		return nil, err
 	}
 
@@ -55,11 +49,6 @@ func New(rawurl, directory string) (*VPNGate, error) {
 		pathmap:   mapping(strings.Replace(directory, "~", usr.HomeDir, 1)),
 		container: NewContainer(),
 		flags:     flags,
-	}
-
-	if v.flags.version {
-		os.Stderr.WriteString(os.Args[0] + ": " + Version + "\n")
-		return nil, ErrIgnorable
 	}
 
 	if v.flags.clean {

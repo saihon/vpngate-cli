@@ -16,5 +16,7 @@ github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/saihon/flags v0.0.0-20190329112307-b73009d3f191 h1:hMsXsqh/hzFy15+MwWeFH+oFq6hR3cP9iGBiDwGgG/E=
 github.com/saihon/flags v0.0.0-20190329112307-b73009d3f191/go.mod h1:EYCQHB3Ku79fnLk/t7k5S3Jmho1CG8/3R7J9vCp3SlM=
+github.com/saihon/flags v0.0.0-20190413143209-f38cd407f46b h1:Dg8s3qCTispi8pUo1iRCxpbZL0aeACGWk0zFb2b/B88=
+github.com/saihon/flags v0.0.0-20190413143209-f38cd407f46b/go.mod h1:EYCQHB3Ku79fnLk/t7k5S3Jmho1CG8/3R7J9vCp3SlM=
 github.com/saihon/pathmap v0.0.0-20190407053153-e7876fec433d h1:lltsJ5V3NafgRa95IE046CglNRFIgVn5fg95q29o5gs=
 github.com/saihon/pathmap v0.0.0-20190407053153-e7876fec433d/go.mod h1:H0jKWdNfmnITr2oT7fnur+d+2bVT7HOJyQCWSRWQ1EQ=

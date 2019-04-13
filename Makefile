@@ -1,6 +1,6 @@
 NAME=vpngate-cli
 VERSION=$(shell git describe --tags --abbrev=0)
-LDFLAGS="-w -s -X 'main.version=$(VERSION)'"
+LDFLAGS="'-w -s -X main.version=$(VERSION)'"
 PREFIX=/usr/local/bin/
 BIN_DIR=bin
 
