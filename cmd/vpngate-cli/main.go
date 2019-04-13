@@ -12,10 +12,6 @@ const (
 	CACHE_DIR = "~/.cache/vpngate-cli"
 )
 
-var (
-	version string
-)
-
 func main() {
 	defer func() {
 		if err := recover(); err != nil {
@@ -28,13 +24,8 @@ func main() {
 }
 
 func _main() int {
-	vpngate.Version = version
-
 	v, err := vpngate.New(LIST_URL, CACHE_DIR)
 	if err != nil {
-		if err == vpngate.ErrIgnorable {
-			return 2
-		}
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		return 1
 	}

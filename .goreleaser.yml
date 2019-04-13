@@ -10,7 +10,7 @@ builds:
       - amd64
       - 386
     ldflags:
-      - -s -w -X main.version=v{{ .Version }}
+      - -s -w
 archive:
   format: tar.gz
   name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"

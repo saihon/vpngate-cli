@@ -1,7 +1,6 @@
 package vpngate
 
 import (
-	"errors"
 	"fmt"
 	"os/user"
 	"strings"
@@ -13,16 +12,13 @@ import (
 	"github.com/saihon/vpngate-cli/pager"
 )
 
+const VERSION = "v0.0.3"
+
 const (
 	QUIT      = pager.KEY_Q
 	CONNECT   = pager.KEY_ENTER
 	EDIT      = pager.KEY_E
 	SELECTION = pager.KEY_B
-)
-
-var (
-	Version      string
-	ErrIgnorable = errors.New("ignorable error")
 )
 
 type VPNGate struct {
