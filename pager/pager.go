@@ -190,6 +190,9 @@ func Start(head, tail, lines []Line) (int, error) {
 	}
 	defer termbox.Close()
 
+	// Run before termbox.Close
+	defer termbox.Clear(termbox.ColorDefault, termbox.ColorDefault)
+
 	// termbox.SetInputMode(termbox.InputEsc)
 	termbox.HideCursor()
 
