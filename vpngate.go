@@ -12,7 +12,7 @@ import (
 	"github.com/saihon/vpngate-cli/pager"
 )
 
-const VERSION = "v0.0.5"
+const VERSION = "v0.0.6"
 
 const (
 	QUIT      = pager.KEY_Q

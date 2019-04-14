@@ -2,6 +2,7 @@ package vpngate
 
 import (
 	"fmt"
+	"os"
 	"strings"
 
 	"github.com/nsf/termbox-go"
@@ -14,7 +15,12 @@ const (
 	coldef = termbox.ColorDefault
 )
 
+func colorReset() {
+	os.Stdout.WriteString("\033[0m")
+}
+
 func (v VPNGate) view(rec *record.Record) (int, error) {
+	defer colorReset()
 	lines := make([]pager.Line, 0, 24)
 
 	keys := v.container.Keys()
