@@ -43,8 +43,11 @@ func init() {
 		})
 	}
 
-	flag.BoolVar(&flags.request, "request", 'r', false, "Force HTTP request\n")
-	flag.BoolVar(&flags.clean, "clean", 'c', false, "Remove cache and .ovpn files\n")
-	flag.StringVar(&flags.option, "option", 'o', "--auth-nocache", "Specify the options for openvpn command\n")
-	flag.Version("version", 'v', VERSION, "Output version information and exit\n")
+	flag.BoolVar(&flags.request, "request", 'r', false, "Force HTTP request\n", nil)
+	flag.BoolVar(&flags.clean, "clean", 'c', false, "Remove cache and .ovpn files\n", nil)
+	flag.StringVar(&flags.option, "option", 'o', "--auth-nocache", "Specify the options for openvpn command\n", nil)
+	flag.Bool("version", 'v', false, "Output version information and exit\n", func(_ flag.Getter) error {
+		fmt.Fprintf(flag.CommandLine.Output(), "%s: %s\n", flag.CommandLine.Name(), VERSION)
+		return flag.ErrHelp
+	})
 }
